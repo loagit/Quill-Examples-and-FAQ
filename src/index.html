@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- jQuery (must be online) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+
+    <!-- Highlight -->
+    <link rel="stylesheet" href="libs/highlight/styles/atelier-cave-dark.css">
+    <script src="libs/highlight/highlight.pack.js"></script>
+
+    <!-- Quill -->
+    <link rel="stylesheet" href="libs/quill/quill.bubble.css">
+    <script src="libs/quill/quill.min.js"></script>
+
+    <!-- My stuff -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id="all">
+        <div id="toolbar-container">
+            <span class="ql-formats">
+                <button class="ql-texthighlight" value="1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.4 15.4" style="fill: rgb(254, 255, 171);">
+                        <path d="M14.1 2.5l-1.9-1.9c-0.7-0.7-1.9-0.7-2.7 0l-6.9 6.9C2 8 1.9 8.8 2.1 9.4l-1.4 3.9c-0.1 0.2 0.3 0.5 0.5 0.5l3.9-1.4c0.7 0.2 1.4 0.1 2-0.4l6.9-6.9C14.8 4.4 14.8 3.2 14.1 2.5zM12.6 4.8L7.4 9.9c-0.3 0.3-0.8 0.3-1.2 0L4.7 8.4C4.4 8 4.4 7.5 4.7 7.2l5.2-5.2c0.3-0.3 0.8-0.3 1.2 0l1.5 1.5C12.9 3.9 12.9 4.5 12.6 4.8z" />
+                        <rect x="1.6" y="14.3" width="8.1" height="1.1" />
+                    </svg>
+                </button>
+                <button class="ql-texthighlight" value="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.4 15.4" style="fill: rgb(255, 171, 171);">
+                        <path d="M14.1 2.5l-1.9-1.9c-0.7-0.7-1.9-0.7-2.7 0l-6.9 6.9C2 8 1.9 8.8 2.1 9.4l-1.4 3.9c-0.1 0.2 0.3 0.5 0.5 0.5l3.9-1.4c0.7 0.2 1.4 0.1 2-0.4l6.9-6.9C14.8 4.4 14.8 3.2 14.1 2.5zM12.6 4.8L7.4 9.9c-0.3 0.3-0.8 0.3-1.2 0L4.7 8.4C4.4 8 4.4 7.5 4.7 7.2l5.2-5.2c0.3-0.3 0.8-0.3 1.2 0l1.5 1.5C12.9 3.9 12.9 4.5 12.6 4.8z" />
+                        <rect x="1.6" y="14.3" width="8.1" height="1.1" />
+                    </svg>
+                </button>
+                <button class="ql-texthighlight" value="3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.4 15.4" style="fill: rgb(171, 207, 255);">
+                        <path d="M14.1 2.5l-1.9-1.9c-0.7-0.7-1.9-0.7-2.7 0l-6.9 6.9C2 8 1.9 8.8 2.1 9.4l-1.4 3.9c-0.1 0.2 0.3 0.5 0.5 0.5l3.9-1.4c0.7 0.2 1.4 0.1 2-0.4l6.9-6.9C14.8 4.4 14.8 3.2 14.1 2.5zM12.6 4.8L7.4 9.9c-0.3 0.3-0.8 0.3-1.2 0L4.7 8.4C4.4 8 4.4 7.5 4.7 7.2l5.2-5.2c0.3-0.3 0.8-0.3 1.2 0l1.5 1.5C12.9 3.9 12.9 4.5 12.6 4.8z" />
+                        <rect x="1.6" y="14.3" width="8.1" height="1.1" />
+                    </svg>
+                </button>
+                <button class="ql-texthighlight" value="4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.4 15.4" style="fill: rgb(178, 255, 171);">
+                        <path d="M14.1 2.5l-1.9-1.9c-0.7-0.7-1.9-0.7-2.7 0l-6.9 6.9C2 8 1.9 8.8 2.1 9.4l-1.4 3.9c-0.1 0.2 0.3 0.5 0.5 0.5l3.9-1.4c0.7 0.2 1.4 0.1 2-0.4l6.9-6.9C14.8 4.4 14.8 3.2 14.1 2.5zM12.6 4.8L7.4 9.9c-0.3 0.3-0.8 0.3-1.2 0L4.7 8.4C4.4 8 4.4 7.5 4.7 7.2l5.2-5.2c0.3-0.3 0.8-0.3 1.2 0l1.5 1.5C12.9 3.9 12.9 4.5 12.6 4.8z" />
+                        <rect x="1.6" y="14.3" width="8.1" height="1.1" />
+                    </svg>
+                </button>
+                <button class="ql-texthighlight" value="5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.4 15.4" style="fill: rgb(225, 225, 225);">
+                        <path d="M14.1 2.5l-1.9-1.9c-0.7-0.7-1.9-0.7-2.7 0l-6.9 6.9C2 8 1.9 8.8 2.1 9.4l-1.4 3.9c-0.1 0.2 0.3 0.5 0.5 0.5l3.9-1.4c0.7 0.2 1.4 0.1 2-0.4l6.9-6.9C14.8 4.4 14.8 3.2 14.1 2.5zM12.6 4.8L7.4 9.9c-0.3 0.3-0.8 0.3-1.2 0L4.7 8.4C4.4 8 4.4 7.5 4.7 7.2l5.2-5.2c0.3-0.3 0.8-0.3 1.2 0l1.5 1.5C12.9 3.9 12.9 4.5 12.6 4.8z" />
+                        <rect x="1.6" y="14.3" width="8.1" height="1.1" />
+                    </svg>
+                </button>
+            </span>
+            <span class="ql-formats">
+                <button class="ql-texthighlight" value="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -18 440.96 440" style="fill: white;">
+                        <path d="m410.667969 405.207031h-394.667969c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h394.667969c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+                        <path d="m216.746094 405.207031c-4.09375 0-8.191406-1.558593-11.304688-4.695312-6.253906-6.25-6.253906-16.382813 0-22.632813l195.625-195.628906c5.097656-5.097656 7.894532-11.753906 7.894532-18.773438 0-7.144531-2.796876-13.886718-7.894532-18.984374l-104.746094-104.75c-6.398437-6.527344-13.84375-7.871094-18.988281-7.871094-7.125 0-13.757812 2.753906-18.644531 7.765625l-218.792969 218.796875c-6.550781 6.398437-7.894531 13.824218-7.894531 18.984375 0 7.125 2.753906 13.761719 7.765625 18.644531l81.835937 81.835938c6.25 6.25 6.25 16.382812 0 22.636718-6.253906 6.25-16.386718 6.25-22.636718 0l-81.707032-81.707031c-11.070312-10.839844-17.257812-25.578125-17.257812-41.410156 0-15.976563 6.1875-30.785157 17.40625-41.75l218.539062-218.515625c21.699219-22.273438 61.335938-22.230469 83.136719.128906l104.597657 104.617188c11.136718 11.136718 17.28125 25.898437 17.28125 41.601562 0 15.550781-6.144532 30.25-17.28125 41.386719l-195.625 195.625c-3.117188 3.136719-7.210938 4.695312-11.308594 4.695312zm0 0" />
+                        <path d="m333.269531 288.703125c-4.097656 0-8.191406-1.554687-11.308593-4.691406l-165.117188-165.121094c-6.25-6.25-6.25-16.382813 0-22.632813 6.25-6.253906 16.382812-6.253906 22.632812 0l165.121094 165.117188c6.25 6.25 6.25 16.386719 0 22.636719-3.15625 3.113281-7.253906 4.691406-11.328125 4.691406zm0 0" />
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <div id="editor">
+            <h2>O que significa Geografia?</h2>
+            <p>
+                A palavra “geografia” tem origem grega e é formada pelos radicais “geo”, que significa Terra, e
+                “grafia”,
+                que significa descrição. Essa nomenclatura refere-se à definição antiga da ciência geográfica, que
+                relacionava Geografia somente aos fenômenos que ocorrem na superfície terrestre.
+            </p>
+            <h2>
+                Construção da Geografia como ciência
+            </h2>
+            <p>
+                A Geografia é uma ciência que foi construída, ou desconstruída, ao longo dos anos. Isso ocorreu pelo
+                fato de
+                que, ao longo do tempo, essa ciência passou por diversas alterações em relação às correntes filosóficas
+                e
+                aos processos históricos vividos pelas sociedades. Ao longo de toda essa transformação, os
+                conceitos-chaves
+                que norteavam o estudo da Geografia renovaram-se, alterando a abrangência dessa área de estudo. Região,
+                território, lugar, paisagem e espaço são os principais conceitos-chaves que fizeram parte dessa
+                (des)construção.
+            </p>
+            <p>
+                A Geografia ficou conhecida como Geografia Tradicional do período que se estendeu de 1870, quando essa
+                ciência foi institucionalizada nas universidades europeias, até 1950. Nesse período, foram privilegiados
+                os
+                conceitos “região” e “paisagem” como objeto de estudo da Geografia. Portanto, o espaço, nesse momento,
+                não
+                era um conceito-chave para o estudo geográfico.
+            </p>
+            <p>
+                Em meados dos anos 50, no período pós-guerra, no qual o mundo experimentava o aparecimento de diversos
+                avanços tecnológicos, surgiu uma nova geografia. Nesse período, o conceito-chave “espaço” passou a
+                orientar
+                o pensamento geográfico. Todo o estudo geográfico anterior a essa época pregava a neutralidade, sem se
+                preocupar com os problemas sociais, pois acreditavam que esses problemas não deveriam ser estudados por
+                geógrafos.
+            </p>
+            <p>
+                Surgiu, então, o que ficou conhecido como Geografia Crítica, que acreditava que os geógrafos deveriam
+                engajar-se politicamente, ou seja, não desvincular a produção científica do contexto histórico. O
+                espaço,
+                então, passou a ser visto como espaço social, no qual se estabelecem as relações entre a sociedade e o
+                meio.
+                O principal representante dessa corrente filosófica no Brasil foi o geógrafo Milton Santos.
+            </p>
+            <p>
+                As correntes da Geografia conhecidas como Humanista e Cultural surgiram nesse mesmo período, contudo,
+                apresentaram uma nova noção de espaço: o espaço vivido, no qual se destacam as experiências vividas e os
+                aspectos subjetivos. Assim, o conceito-chave deixou de ser “espaço” e tornou-se “lugar”. O lugar
+                representa,
+                então, a subjetividade, as experiências, o cotidiano, a ligação da sociedade com o meio por meio do
+                simbólico.
+            </p>
+            <p>
+                A Geografia, portanto, é palco de diversas discussões a respeito de seu objeto de estudo, visto que, ao
+                longo dos anos, essa ciência passou por períodos de construção e desconstrução de seu pensamento.
+            </p>
+            <h2>
+                Ramos da Geografia
+            </h2>
+            <p>
+                A Geografia é dividida em alguns ramos, o que não significa que essa ciência deve ser estudada de forma
+                compartimentada. Essa divisão é feita apenas para nortear os estudos, visto que as relações entre o meio
+                e a
+                natureza são indissociáveis.
+            </p>
+            <h2>
+                Qual é a importância da Geografia?
+            </h2>
+            <p>
+                É essencial entender as relações entre o meio e a sociedade. É por meio dessas relações que podemos
+                compreender
+                a dinâmica do mundo, os processos históricos que interferem nela e a influência das características
+                geográficas
+                em uma determinada cultura.
+            </p>
+            <p>
+                Por meio da Geografia, podemos compreender os fenômenos que ocorrem na superfície terrestre e suas
+                implicações
+                sobre a sociedade. Podemos distinguir as diferenças culturais, econômicas e políticas entre os povos.
+            </p>
+            <p>
+                A Geografia permite que analisemos nossa relação com o meio, com os recursos naturais e com tudo
+                aquilo que a natureza fornece para a manutenção da vida. Permite ainda compreender como a sociedade
+                impacta positivamente e negativamente o meio, oferecendo alternativas para preservá-lo.
+            </p>
+            <p>
+                A compreensão do espaço geográfico e das alterações que o homem provoca nele permite-nos analisar nossa
+                existência, nossa história e, por que não, nosso futuro.
+            </p>
+        </div>
+
+        <!-- Add some space -->
+        <div style="margin-top: 40px;"></div>
+
+        <!-- Tab buttons -->
+        <div class="tab">
+            <button id="default-tab-button" class="tab-button"
+                onclick="openTab(event, 'tab-content-delta')">Delta</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-content-text')">Text</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-content-html')">HTML</button>
+        </div>
+
+        <!-- Tab contents -->
+        <div id="tab-content-delta" class="tab-content">
+            <p>...</p>
+            <pre><code class="json"></code></pre>
+        </div>
+        <div id="tab-content-text" class="tab-content">
+            <pre><code class="plaintext"></code></pre>
+        </div>
+        <div id="tab-content-html" class="tab-content">
+            <pre><code class="html"></code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
