@@ -1,5 +1,5 @@
 # quill-highlight-example-001
-A simple public Quill project, useful for anyone who wants to learn a little more about this tool. This project introduces the use of a toolbar with text highlighting tools.
+A simple public Quill project, useful for anyone who wants to learn a little more about this tool (the code is all commented). This project introduces the use of a toolbar with text highlighting tools.
 
 Instructions:
 
