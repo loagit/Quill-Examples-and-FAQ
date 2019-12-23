@@ -86,41 +86,35 @@ function updateDataOutput(tabContent) {
 //                                                                            QUILL
 // #################################################################################
 
-let BlockEmbed = Quill.import('blots/block/embed');
-// let Video = Quill.import('formats/video');
+// let BlockEmbed = Quill.import('blots/block/embed');
+let DefaultVideo = Quill.import('formats/video');
 
-class CentralizedVideo extends BlockEmbed {
-  static create({ src, width, height, fullscreen }) {
+class CentralizedVideo extends DefaultVideo {
+  static create(value) {
     // Get node from superclass.
-    let node = super.create(src);
-
-    // Is there any value for width and height?
-    if (typeof width === 'undefined' ||
-      typeof height === 'undefined') {
-      width = 640;
-      height = 480;
-    }
+    let node = super.create(value);
 
     // Set width and height.
-    node.width = width;
-    node.height = height;
+    node.width = 640;
+    node.height = 480;
 
-    // if(typeof src === 'undefined') src = 'https://www.youtube.com/watch?v=ZbDTIRvJjlY&';
-    src = this.extractVideoUrl(src);
+    // Get url in correct format
+    value = this.extractVideoUrl(value);
 
-    node.setAttribute('src', src);
+    node.setAttribute('src', value);
     node.setAttribute('frameborder', '0');
     node.setAttribute('allowfullscreen', true);
+    node.classList.add('ql-align-center');
 
-    console.log('src: ' + src);
-    console.log('widht: ' + width);
-    console.log('height: ' + height);
+    console.log('src: ' + value);
+    console.log('widht: ' + node.width);
+    console.log('height: ' + node.height);
 
     return node;
   }
 
   static value(node){
-    return node.getAttribute('src') || 'null';
+    return node.getAttribute('src');
   }
 
   // See: https://github.com/quilljs/quill/blob/develop/themes/base.js#L284
@@ -189,16 +183,10 @@ function insertVideo(value){
 
 $(document).ready(function () {
   var toolbarOptions = {
-    container: [
-      ['bold', 'italic', 'underline', 'strike'],
-      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-      [{ 'align': null }, { 'align': 'center' }, { 'align': 'right' }, { 'align': 'justify' }],
-      [{ 'color': [] }, { 'background': [] }],
-      ['image', 'video'],
-      ['clean']] , 
+    container: ['video'] /*, 
     handlers: {
       video: insertVideo
-    }
+    }*/
   };  // Atenção! Clean também remove embed blots!
   var quill = new Quill('#editor', {
     theme: 'snow',
