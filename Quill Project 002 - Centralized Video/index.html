@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quill - Project 003</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+
+    <!-- Highlight -->
+    <link rel="stylesheet" href="libs/highlight/styles/atelier-cave-dark.css">
+    <script src="libs/highlight/highlight.pack.js"></script>
+
+    <!-- Quill -->
+    <link rel="stylesheet" href="libs/quill/quill.snow.css">
+    <script src="libs/quill/quill.min.js"></script>
+
+    <!-- My stuff -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id="all">
+        <div id="conteiner-editor">
+            <div id="editor">
+                <p>
+                    Brazil, officially the Federative Republic of Brazil, is the largest country in both South 
+                    America and Latin America. At 8.5 million square kilometers (3.2 million square miles) and 
+                    with over 208 million people, Brazil is the world's fifth-largest country by area and the 
+                    fifth most populous. Its capital is Brasília, and its most populated city is São Paulo. The 
+                    federation is composed of the union of the 26 states, the Federal District, and the 5,570 
+                    municipalities. It is the largest country to have Portuguese as an official language and the 
+                    only one in the Americas; it is also one of the most multicultural and ethnically diverse 
+                    nations, due to over a century of mass immigration from around the world.
+                </p>
+                <p>
+                    Bounded by the Atlantic Ocean on the east, Brazil has a coastline of 7,491 kilometers (4,655 
+                    mi). It borders all other countries in South America except Ecuador and Chile and covers 47.3% 
+                    of the continent's land area. Its Amazon River basin includes a vast tropical forest, home to 
+                    diverse wildlife, a variety of ecological systems, and extensive natural resources spanning 
+                    numerous protected habitats. This unique environmental heritage makes Brazil one of 17 
+                    megadiverse countries, and is the subject of significant global interest and debate regarding 
+                    deforestation and environmental protection. 
+                </p>
+            </div>
+        </div>
+        <div class="conteiner-abas">
+            <div class="tabs">
+                <button class="abas-aba" onclick="openTab(event , 'content-delta')" id="default-tab">Delta</button>
+                <button class="abas-aba" onclick="openTab(event , 'content-text')">Text</button>
+                <button class="abas-aba" onclick="openTab(event , 'content-html')">HTML</button>
+                <button class="abas-aba" onclick="openTab(event , 'content-misc')">Misc.</button>
+            </div>
+            <div id="content-misc" class="abas-conteudo">
+                <label><input type="checkbox" id="input-check-readonly">Read-Only Mode</label>
+            </div>
+            <div id="content-delta" class="abas-conteudo">
+                <p>...</p>
+                <pre>
+                    <code class="json">
+                        ...
+                    </code>
+                </pre>
+            </div>
+            <div id="content-text" class="abas-conteudo">
+                <pre>
+                    <code class="plaintext">
+                        ...
+                    </code>
+                </pre>
+            </div>
+            <div id="content-html" class="abas-conteudo">
+                <pre>
+                    <code class="html">
+                        ...
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
