@@ -132,7 +132,7 @@ https://stackoverflow.com/questions/40347908/list-of-recognized-quill-toolbar-cl
 **017 - How can I create my own format?**  
 **017 - How can I add new styles to Quill?**
 
-https://github.com/loagit/quill-highlight-example-001
+Try taking a look at the projects in this repository. Their source code is all commented.
 
 **018 - How can I set a toolbar like the one displayed on Quill page?**
 
