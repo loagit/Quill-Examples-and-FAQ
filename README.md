@@ -202,7 +202,7 @@ var quill = new Quill('#editor', {
 ```
 **HINT / TIP:** To find all available native Quill formats, see questions 013 and 016.
 
-In **Nº3**, you pass an HTML element that will be used as a toolbar. In it, &lt;button> and &lt;select> elements will be recognized as the toolbar controls (the buttons). These elements must have their CSS classes as formats they represent, which can be existing native Quill formats, or custom formats defined by the developer himself/herself.
+In **Nº3**, you pass an HTML element that will be used as a toolbar. In it, `<button>` and `<select>` elements will be recognized as the toolbar controls (the buttons). These elements must have their CSS classes as formats they represent, which can be existing native Quill formats, or custom formats defined by the developer himself/herself.
    
 Examples of how this is done can be found at the following links:
 
