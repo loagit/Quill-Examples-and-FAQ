@@ -190,6 +190,6 @@ var toolbarOptions = [
   ['clean']                                         // remove formatting button
 ];
 ```
-In **the latter**, you pass an (HTML element that will be used as a toolbar)[https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20001%20-%20Highlight/index.html#L28]. In it, <button> and <select> elements will be recognized as the toolbar controls (the buttons). These elements must have their CSS classes as formats they represent, which can be existing native Quill formats, or custom formats defined by the developer himself/herself.
+In **the latter**, you pass an [HTML element that will be used as a toolbar](https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20001%20-%20Highlight/index.html#L28). In it, <button> and <select> elements will be recognized as the toolbar controls (the buttons). These elements must have their CSS classes as formats they represent, which can be existing native Quill formats, or custom formats defined by the developer himself/herself.
 
-The process of how this can be done can be found either on (Quill page)[https://quilljs.com/docs/modules/toolbar/#container] itself, or in the examples shown in this repository.
+The process of how this can be done can be found either on [Quill page](https://quilljs.com/docs/modules/toolbar/#container) itself, or in the examples shown in this repository.
