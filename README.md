@@ -170,7 +170,8 @@ Basically, according to the listed items above, in **Nº1** you use the toolbar 
 
 In **Nº2**, you define which buttons are present by passing a array of formats, like so:
 ```javascript
-var toolbarOptions = [
+// Example 1
+var toolbarOptions1 = [
   ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
   ['blockquote', 'code-block'],
 
@@ -189,6 +190,15 @@ var toolbarOptions = [
 
   ['clean']                                         // remove formatting button
 ];
+
+// Example 2
+var toolbarOptions2 = ['bold', 'italic', 'underline', 'strike'];
+
+var quill = new Quill('#editor', {
+  modules: {
+    toolbar: toolbarOptions1 // For teaching use only
+  }
+});
 ```
 **HINT / TIP:** To find all available native Quill formats, see questions 013 and 016.
 
