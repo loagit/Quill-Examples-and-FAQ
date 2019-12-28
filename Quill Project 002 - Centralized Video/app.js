@@ -185,7 +185,7 @@ $(document).ready(function () {
     handlers: {
       video: insertVideo
     }*/
-  };  // Atenção! Clean também remove embed blots!
+  };
   var quill = new Quill('#editor', {
     theme: 'snow',
     modules: {
