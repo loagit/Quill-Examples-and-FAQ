@@ -36,7 +36,7 @@ This project demonstrates how you can extend an existing blot to slightly change
 
 # QUILL FAQ
 
-Wishing to bring more information, I decided to create a FAQ section. I want to make it clear that the answers to all the questions listed were obtained from different locations over the internet. Its authors have not given me permission to exhibit here. If they wish so, I am open to remove any desired item. Likewise, the credit on them belongs to each one.
+Wishing to bring more information, I decided to create a FAQ section. I want to make it clear that the answers to all the questions listed were obtained from different locations over the internet. Its authors have not given me permission to exhibit here, nor have they denied me. If they wish so, I am open to remove any desired item. Likewise, the credit on them belongs to each one.
 
 **001 - How can I add a letter / word counter?**  
 **001 - How can I add a module to Quill?**
