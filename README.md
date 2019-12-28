@@ -160,13 +160,13 @@ Quill's toolbar module allows the editor to have its toolbar configured in 3 dif
 2.  Vector/Array of formats in JavaScript code.
 3.  HTML Elements with format CSS classes in HTML code.
 
-This can be seen at the beginning of the [toolbar module source code](https://github.com/quilljs/quill/blob/develop/modules/toolbar.js#L10). Note the:
+Out of curiosity, this can be seen at the beginning of the [toolbar module source code](https://github.com/quilljs/quill/blob/develop/modules/toolbar.js#L10). Where you can find:
 ```javascript
 if(Array.isArray(this.options.container){ // ... }
 else if(typeof this.options.container === 'string'){ // ... }
 else{ // ... }
 ```
-Basically, in **Nº1** you use the toolbar with the standard Quill buttons. Here you do not have to do any configuration, but you will only have a portion of the Quill buttons, as not all are set by default. 
+Basically, according to the listed items above, in **Nº1** you use the toolbar with the standard Quill buttons. Here you do not have to do any configuration, but you will only have a portion of the Quill buttons, as not all are set by default. 
 
 In **Nº2**, you define which buttons are present by passing a array of formats, like so:
 ```javascript
