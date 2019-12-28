@@ -1,6 +1,6 @@
 # INTRO
 
-This repository is designed to serve as an informational medium for anyone learning to use the rich text editor [Quill JS](https://quilljs.com/). Each existing folder represents a small project using Quill, all aimed at displaying a case study. A description of each one can be found below. All follow a very simple structure, where there are 3 files:
+This repository is designed to serve as an informational medium for anyone learning to use the rich text editor [Quill JS](https://quilljs.com/). Each existing folder represents a small project using Quill, all aimed at displaying a case study. A description of each one can be found below. All of them follow a very simple structure, where there are 3 common files:
 
 1.  index.html - Main page, and entry point. Open it to see the editor.
 2.  app.js - The JavaScript source code.
