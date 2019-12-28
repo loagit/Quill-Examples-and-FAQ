@@ -10,7 +10,7 @@ To take advantage, each source code file is commented out. Therefore, in the des
 
 #### BRIEF REQUEST
 
-Seeing how some people have already accessed this repository, and in order to have better information for everyone, I humbly come to ask: [Could someone help me improve Project 001 - Highlight?](https://stackoverflow.com/questions/59437258/in-quill-how-can-i-use-bubble-themed-toolbar-in-read-only-mode)
+Seeing how some people have already accessed this repository, in order to have better information for everyone I humbly come to ask: [Could someone help me improve Project 001 - Highlight?](https://stackoverflow.com/questions/59437258/in-quill-how-can-i-use-bubble-themed-toolbar-in-read-only-mode)
 
 #### NOTE
 
