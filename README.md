@@ -192,7 +192,7 @@ var toolbarOptions = [
 ```
 **HINT / TIP:** To find all available native Quill formats, see questions 013 and 016.
 
-In **the latter**, you pass an [HTML element that will be used as a toolbar](https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20001%20-%20Highlight/index.html#L28). In it, <button> and <select> elements will be recognized as the toolbar controls (the buttons). These elements must have their CSS classes as formats they represent, which can be existing native Quill formats, or custom formats defined by the developer himself/herself.
+In **the latter**, you pass an [HTML element that will be used as a toolbar](https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20001%20-%20Highlight/index.html#L28). In it, &lt;button> and &lt;select> elements will be recognized as the toolbar controls (the buttons). These elements must have their CSS classes as formats they represent, which can be existing native Quill formats, or custom formats defined by the developer himself/herself.
    
 Examples of how this is done can be found at the following links:
 
