@@ -138,3 +138,9 @@ Try taking a look at the projects in this repository. Their source code is all c
 
 https://stackoverflow.com/questions/34734750/how-to-create-a-quilljs-toolbar-exactly-as-shown-in-samples#
 
+**019 - How can I extend an existing blot?**  
+**019 - How can I create a blot from an existing one?**
+
+See project 2, in particular, the following line of code:
+
+https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20002%20-%20Centralized%20Video/app.js#L91
