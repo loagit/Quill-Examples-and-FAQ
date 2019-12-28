@@ -99,9 +99,9 @@ class CentralizedVideo extends DefaultVideo {
 
     // Get url in correct format. Without it, the video will not work.
     value = this.extractVideoUrl(value);
-
-    // These three lines of code are not required as this is already done in the superclass.
-    // node.setAttribute('src', value);
+    node.setAttribute('src', value);
+    
+    // These two lines of code are not required as this is already done in the superclass.
     // node.setAttribute('frameborder', '0');
     // node.setAttribute('allowfullscreen', true);
     node.classList.add('ql-align-center');
