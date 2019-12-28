@@ -226,7 +226,7 @@ Examples of how this is done can be found at the following links:
 </div>
 ...
 ```
-This will not only find the button as a toolbar component/control, but will also associate it with the icon and the behavior of the desired format (in this case bold). If you want to create an italic button, use the ql-italic CSS class, and so on.
+This will not only find the button as a toolbar component/control, but will also associate it with the icon and the behavior of the desired format (in this case bold). If you want to create an italic button, use the `ql-italic` CSS class, and so on.
 
 **To define custom buttons that do not work with existing formats**, you'll of course need to define a new format (see question 017), and you can use SVG as the button icon. For the button to automatically call (and also reflect the state of) a custom format, you must define the button's CSS class with the blot name of the registered format.
 
