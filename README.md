@@ -12,6 +12,9 @@ To take advantage, each source code file is commented out. Therefore, in the des
 
 https://stackoverflow.com/q/59366868/2910546
 
+#### BRIEF REQUEST
+
+Seeing how some people have already accessed this repository, I humbly come here to ask: [Could someone help me improve Project 001 - Highlight?](https://stackoverflow.com/questions/59437258/in-quill-how-can-i-use-bubble-themed-toolbar-in-read-only-mode)
 
 ### Quill Project 001 - Hightlight
 
