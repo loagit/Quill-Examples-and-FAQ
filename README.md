@@ -146,7 +146,7 @@ https://stackoverflow.com/questions/34734750/how-to-create-a-quilljs-toolbar-exa
 **019 - How can I extend an existing blot?**  
 **019 - How can I create a blot from an existing one?**
 
-See project 2, in particular, the following line of code:
+See [Project 002 - Centralized Video](https://github.com/loagit/Quill-Examples-and-FAQ/tree/master/Quill%20Project%20002%20-%20Centralized%20Video), in particular, the following line of code:
 
 https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20002%20-%20Centralized%20Video/app.js#L91
 
