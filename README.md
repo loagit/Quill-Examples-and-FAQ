@@ -209,3 +209,49 @@ Examples of how this is done can be found at the following links:
 1.  [Quill page](https://quilljs.com/docs/modules/toolbar/#container)
 2.  [Project 001 - Highlight](https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20001%20-%20Highlight/index.html#L28)
 3.  [Quill Repo](https://github.com/quilljs/quill/blob/develop/docs/_includes/standalone/full.html)
+
+**021 - How can I add icons to toolbar buttons?**  
+**021 - How can I reflect the format applied to the editor content in relation to a toolbar button?**
+
+**For native Quill buttons**, setting the correct CSS class on the button will automatically get it the desired icon and behavior. For example, let's say you have an HTML structure being used as a toolbar, and you want to add Quill's native bold button. You just need to set the CSS class with the name given to the bold blot. The detail here is that in order for Quill to recognize this button, the given CSS class name must be prefixed with `ql-`. Take a look:
+```html
+...
+<div id="standalone-container">
+  <div id="toolbar-container">
+     <button class="ql-bold"></button>
+  </div>
+  <div id="editor">
+    <p>Some text...</p>
+  </div>
+</div>
+...
+```
+This will not only find the button as a toolbar component/control, but will also associate it with the icon and the behavior of the desired format (in this case bold). If you want to create an italic button, use the ql-italic CSS class, and so on.
+
+**To define custom buttons that do not work with existing formats**, you'll of course need to define a new format (see question 017), and you can use SVG as the button icon. For the button to automatically call (and also reflect the state of) a custom format, you must define the button's CSS class with the blot name of the registered format.
+
+Let's say you have created a highlight format, and you want to add an icon to the respective button. We can have the following HTML structure:
+```html
+...
+<div id="standalone-container">
+  <div id="toolbar-container">
+     <button class="ql-highlight">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.4 15.4">
+                        <path d="M14.1 2.5l-1.9-1.9c-0.7-0.7-1.9-0.7-2.7 0l-6.9 6.9C2 8 1.9 8.8 2.1 9.4l-1.4 3.9c-0.1 0.2 0.3 0.5 0.5 0.5l3.9-1.4c0.7 0.2 1.4 0.1 2-0.4l6.9-6.9C14.8 4.4 14.8 3.2 14.1 2.5zM12.6 4.8L7.4 9.9c-0.3 0.3-0.8 0.3-1.2 0L4.7 8.4C4.4 8 4.4 7.5 4.7 7.2l5.2-5.2c0.3-0.3 0.8-0.3 1.2 0l1.5 1.5C12.9 3.9 12.9 4.5 12.6 4.8z" />
+                        <rect x="1.6" y="14.3" width="8.1" height="1.1" />
+                    </svg>
+     </button>
+  </div>
+  <div id="editor">
+    <p>Some text...</p>
+  </div>
+</div>
+...
+```
+Make it clear, though, that Quill's default buttons are set with SVG as well, but they use their own CSS classes to draw certain details (some drawn shapes). **If your button is looking weird**, like it's too thick or too thin, I suggest you look at the CSS classes that are applied to Quill's native buttons, more specifically, the elements within the SVG element, and try to hand-apply them to your code.
+
+To do this, you can visit the quill homepage and, through the browser, right-click on one of the toolbar's present buttons. Select "inspect element" (or something similar) option, and see which CSS classes are being applied to the SVG elements. Try turning off styles, and note if the present class can help better shape the shapes of your button icon.
+
+For Quill, SVG `path` elements use `ql-stroke` CSS class, while `rect` elements use `ql-fill`, and `line` use `ql-stroke` and `ql-thin`.
+
+You can also choose to create your own styling by applying your own CSS classes. As an example of something already implemented and functional, [see Project 001 - Highlight](https://github.com/loagit/Quill-Examples-and-FAQ/tree/master/Quill%20Project%20001%20-%20Highlight).
