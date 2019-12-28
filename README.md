@@ -14,7 +14,7 @@ Seeing how some people have already accessed this repository, and in order to ha
 
 #### NOTE
 
-Not sure if I will be updating this. Therefore, do not expect future changes. This repository was created for display purposes only, to spread knowledge, and it was originated from a question I made in stackoverflow community:
+Not sure if I will be updating this forever. Therefore, do not expect future changes. This repository was created for display purposes only, to spread knowledge, and it was originated from a question I made in stackoverflow community:
 
 https://stackoverflow.com/q/59366868/2910546
 
