@@ -8,15 +8,15 @@ This repository is designed to serve as an informational medium for anyone learn
 
 To take advantage, each source code file is commented out. Therefore, in the desire to understand how something works, please try to read.
 
+#### BRIEF REQUEST
+
+Seeing how some people have already accessed this repository, and in order to have better information for everyone, I humbly come to ask: [Could someone help me improve Project 001 - Highlight?](https://stackoverflow.com/questions/59437258/in-quill-how-can-i-use-bubble-themed-toolbar-in-read-only-mode)
+
 #### NOTE
 
 Not sure if I will be updating this. Therefore, do not expect future changes. This repository was created for display purposes only, to spread knowledge, and it was originated from a question I made in stackoverflow community:
 
 https://stackoverflow.com/q/59366868/2910546
-
-#### BRIEF REQUEST
-
-Seeing how some people have already accessed this repository, and from the work I had to at least organize all this information here, I humbly come to ask: [Could someone help me improve Project 001 - Highlight?](https://stackoverflow.com/questions/59437258/in-quill-how-can-i-use-bubble-themed-toolbar-in-read-only-mode)
 
 ### Quill Project 001 - Hightlight
 
