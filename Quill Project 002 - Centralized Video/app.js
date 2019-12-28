@@ -33,7 +33,7 @@ function isHidden(el) {
   return (el.offsetParent === null)
 }
 
-/** Retorna a contêiner da aba atualmente ativa. */
+/** Returns the currently active tab container. */
 function getActiveTabContent() {
   let tabContents = document.querySelectorAll('.abas-conteudo');
   for (let item of tabContents) {
