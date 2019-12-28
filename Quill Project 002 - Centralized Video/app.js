@@ -86,7 +86,6 @@ function updateDataOutput(tabContent) {
 //                                                                            QUILL
 // #################################################################################
 
-// let BlockEmbed = Quill.import('blots/block/embed');
 let DefaultVideo = Quill.import('formats/video');
 
 class CentralizedVideo extends DefaultVideo {
@@ -98,17 +97,14 @@ class CentralizedVideo extends DefaultVideo {
     node.width = 640;
     node.height = 480;
 
-    // Get url in correct format
+    // Get url in correct format. Without it, the video will not work.
     value = this.extractVideoUrl(value);
 
-    node.setAttribute('src', value);
-    node.setAttribute('frameborder', '0');
-    node.setAttribute('allowfullscreen', true);
+    // These three lines of code are not required as this is already done in the superclass.
+    // node.setAttribute('src', value);
+    // node.setAttribute('frameborder', '0');
+    // node.setAttribute('allowfullscreen', true);
     node.classList.add('ql-align-center');
-
-    console.log('src: ' + value);
-    console.log('widht: ' + node.width);
-    console.log('height: ' + node.height);
 
     return node;
   }
@@ -137,6 +133,7 @@ class CentralizedVideo extends DefaultVideo {
   }
 }
 
+// Again, this is not necessary either, as it is already defined in the superclass.
 // CentralizedVideo.blotName = 'centralized-video';
 // CentralizedVideo.className = 'ql-centralized-video';
 // CentralizedVideo.tagName = 'IFRAME';
@@ -184,6 +181,7 @@ function insertVideo(value){
 $(document).ready(function () {
   var toolbarOptions = {
     container: ['video'] /*, 
+    This would be the manual way to add the video.
     handlers: {
       video: insertVideo
     }*/
@@ -197,7 +195,7 @@ $(document).ready(function () {
 
   window.quill = quill;
 
-  // Abra a aba padrão da aplicação.
+  // Opens default tab.
   document.getElementById('default-tab').click();
 
   // Checkbox
@@ -206,7 +204,7 @@ $(document).ready(function () {
     quill.enable(!checkRO.checked);
   });
 
-  // Alteração de conteúdo do quill
+  // Quill content change.
   quill.on('text-change', function (delta, oldDelta, source) {
     updateDataOutput();
   });
