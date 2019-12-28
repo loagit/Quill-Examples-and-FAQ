@@ -230,7 +230,7 @@ This will not only find the button as a toolbar component/control, but will also
 
 **To define custom buttons that do not work with existing formats**, you'll of course need to create a new format (see question 017), and you can use SVG as the button icon. For the button to automatically call (and also reflect the state of) a custom format, you must define the button's CSS class with the blot name of the registered format.
 
-Let's say you have created a highlight format, and you want to add an icon to the respective button. We can have the following HTML structure:
+Let's say you have created a `highlight` format, and you want to add an icon to the respective button. We can have the following HTML structure:
 ```html
 ...
 <div id="standalone-container">
