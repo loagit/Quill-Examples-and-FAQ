@@ -63,11 +63,15 @@ For example, to change the padding given to editor content:
 
 https://quilljs.com/docs/themes/#customization
 
-**004 - How can I use Delta API?**
+**004 - How can I use Delta API?**  
+**004 - Where can I find more about Delta API?**
 
 https://github.com/quilljs/delta
+https://quilljs.com/docs/delta/
+https://quilljs.com/guides/designing-the-delta-format/
 
-**005 - How can I use Parchment API?**
+**005 - How can I use Parchment API?**  
+**005 - Where can I find more about Parchment API?**
 
 https://github.com/quilljs/parchment
 
@@ -99,7 +103,8 @@ https://quilljs.com/playground/#autosave
 
 https://quilljs.com/playground/#autogrow-height
 
-**013 - How can I find the full featured version of Quill?**
+**013 - How can I find the full featured version of Quill?**  
+**013 - Where can I find a exxample of Quill with all it's features?**
 
 https://quilljs.com/docs/formats/
 
@@ -144,3 +149,47 @@ https://stackoverflow.com/questions/34734750/how-to-create-a-quilljs-toolbar-exa
 See project 2, in particular, the following line of code:
 
 https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20002%20-%20Centralized%20Video/app.js#L91
+
+**020 - How can I use the toolbar?**  
+**020 - How can I define my own custom toolbar?**  
+**020 - What are the existing ways to work with the toolbar module?**
+
+Quill's toolbar module allows the editor to have its toolbar configured in 3 different ways:
+
+1.  Quill default configuration.
+2.  Vector/Array of formats in JavaScript code.
+3.  HTML Elements with format CSS classes in HTML code.
+
+This can be seen at the beginning of the (toolbar module source code)[https://github.com/quilljs/quill/blob/develop/modules/toolbar.js#L10]. Note the:
+```javascript
+if(Array.isArray(this.options.container){ // ... }
+else if(typeof this.options.container === 'string'){ // ... }
+else{ // ... }
+```
+Basically, in **the first one** you use the toolbar with the standard Quill buttons. Here you do not have to do any configuration, but you will only have a portion of the Quill buttons, as not all are set by default. 
+
+In **the second**, you define which buttons are present by passing a array of formats, like so:
+```javascript
+var toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
+
+  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction
+
+  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  [{ 'font': [] }],
+  [{ 'align': [] }],
+
+  ['clean']                                         // remove formatting button
+];
+```
+In **the latter**, you pass an (HTML element that will be used as a toolbar)[https://github.com/loagit/Quill-Examples-and-FAQ/blob/master/Quill%20Project%20001%20-%20Highlight/index.html#L28]. In it, <button> and <select> elements will be recognized as the toolbar controls (the buttons). These elements must have their CSS classes as formats they represent, which can be existing native Quill formats, or custom formats defined by the developer himself/herself.
+
+The process of how this can be done can be found either on (Quill page)[https://quilljs.com/docs/modules/toolbar/#container] itself, or in the examples shown in this repository.
