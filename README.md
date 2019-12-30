@@ -262,3 +262,7 @@ To do this, you can visit the quill homepage and, through the browser, right-cli
 For Quill, SVG `path` elements use `ql-stroke` CSS class, while `rect` elements use `ql-fill`, and `line` use `ql-stroke` and `ql-thin`. But this is not a rule, and each case is a case.
 
 You can also choose to create your styling by applying your own CSS classes. As an example of something already implemented and functional, [see Project 001 - Highlight](https://github.com/loagit/Quill-Examples-and-FAQ/tree/master/Quill%20Project%20001%20-%20Highlight).
+
+**022 - How can I add custom font sizes to Quill toolbar?**
+
+https://stackoverflow.com/a/43808486/2910546
