@@ -71,8 +71,8 @@ https://quilljs.com/docs/themes/#customization
 **004 - How can I use Delta API?**  
 **004 - Where can I find more about Delta API?**
 
-https://github.com/quilljs/delta
-https://quilljs.com/docs/delta/
+https://github.com/quilljs/delta  
+https://quilljs.com/docs/delta/  
 https://quilljs.com/guides/designing-the-delta-format/
 
 **005 - How can I use Parchment API?**  
@@ -95,7 +95,7 @@ https://quilljs.com/docs/api/#enable
 **009 - How can I set the font of the selected text?**  
 **009 - How can I add custom fonts to the toolbar?**
 
-https://quilljs.com/playground/#custom-fonts
+https://quilljs.com/playground/#custom-fonts  
 https://stackoverflow.com/questions/43728080/how-to-add-font-types-on-quill-js-with-toolbar-options
 
 **010 - How can I change text color and text background?**
