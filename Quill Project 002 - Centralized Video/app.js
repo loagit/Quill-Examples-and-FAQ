@@ -148,18 +148,18 @@ function getContentDelta() {
   return quill.getContents();
 }
 
+/** See: https://github.com/quilljs/quill/issues/2698 */
 function getContentText() {
-  return quill.getContents().ops.reduce((text, op) => {
-    // Verifica se operação atual é texto puro, ou algum outro tipo.
-    if (typeof op.insert === 'string') {
-      return text + op.insert;
-    }
-    // Se não for string, o caractere de nova linha é posto, o qual possui
-    // um tamanho de apenas 1 caractere.
-    else {
-      return text + '\n';
-    }
-  }, '');
+    return quill.getContents().ops.reduce((text, op) => {
+        if (typeof op.insert === 'string') {
+            return text + op.insert;
+        }
+        // If it is not a string, the newline character is set, which has
+        // a length of only 1 character.
+        else {
+            return text + '\n';
+        }
+    }, '');
 }
 
 /** Insert a video blot at caret position. If there is a selection range, then 
