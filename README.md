@@ -92,9 +92,11 @@ https://quilljs.com/docs/modules/syntax/
 
 https://quilljs.com/docs/api/#enable
 
-**009 - How can I set the font of the selected text?**
+**009 - How can I set the font of the selected text?**  
+**009 - How can I add custom fonts to the toolbar?**
 
 https://quilljs.com/playground/#custom-fonts
+https://stackoverflow.com/questions/43728080/how-to-add-font-types-on-quill-js-with-toolbar-options
 
 **010 - How can I change text color and text background?**
 
