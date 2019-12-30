@@ -266,3 +266,8 @@ You can also choose to create your styling by applying your own CSS classes. As 
 **022 - How can I add custom font sizes to Quill toolbar?**
 
 https://stackoverflow.com/a/43808486/2910546
+
+**023 - How can I retrieve Quill content?**
+**023 - How can I get Quill data?**
+
+https://stackoverflow.com/a/42541886/2910546
