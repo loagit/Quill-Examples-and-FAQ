@@ -271,3 +271,28 @@ https://stackoverflow.com/a/43808486/2910546
 **023 - How can I get Quill data?**
 
 https://stackoverflow.com/a/42541886/2910546
+
+**024 - How can I add a video from my local machine?**  
+**024 - How can I add a video from a file?**  
+**024 - How can I create a video type that allows me to add video from my local machine?**  
+**024 - How can I add video from a file on my server?**
+
+Adding a video in Quill editor is the same as adding a video to an HTML page:
+
+1.  [Embeds: Video, Audio and iFrame Elements](https://ilovecoding.org/lessons/embeds-video-audio-and-iframe-elements)
+2.  [How to Embed Video using HTML5 with local file](https://stackoverflow.com/questions/18670728/how-to-embed-video-using-html5-with-local-file)
+
+My suggestion for this is that the added element is not an `<iframe>` element, but `<video>`. We know that [Quill does not natively have in its video format this desired HTML element/tag](https://github.com/quilljs/quill/blob/develop/formats/video.js#L51).
+
+Therefore, to add support to it and to take advantage of what is already implemented, we can simply extend the existing `video` format, but changing some of its settings. In particular, we have to change the tag given to the blot, its class, and the name so that there are no conflicts:
+```javascript
+let DefaultVideo = Quill.import('formats/video');
+class LocalVideo extends DefaultVideo { ... }
+
+LocalVideo.blotName = 'local-video';
+LocalVideo.className = 'ql-local-video';
+LocalVideo.tagName = 'VIDEO';
+
+Quill.register(LocalVideo);
+```
+As a suggestion for implementing custom formats, take a look at the projects in this repository.
