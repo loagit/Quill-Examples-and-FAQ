@@ -302,4 +302,4 @@ As a suggestion for implementing custom formats, take a look at the projects in 
 
 https://stackoverflow.com/questions/44219124/creating-a-custom-class-attributer-in-quilljs  
 https://www.scalablepath.com/blog/using-quill-js-build-wysiwyg-editor-website/  
-https://github.com/quilljs/quill/issues/1036)
+https://github.com/quilljs/quill/issues/1036
