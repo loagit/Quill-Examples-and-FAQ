@@ -303,3 +303,38 @@ As a suggestion for implementing custom formats, take a look at the projects in 
 https://stackoverflow.com/questions/44219124/creating-a-custom-class-attributer-in-quilljs  
 https://www.scalablepath.com/blog/using-quill-js-build-wysiwyg-editor-website/  
 https://github.com/quilljs/quill/issues/1036
+
+**026 - How can I add a button to toolbar that has no relation to any format?**  
+**026 - How can I add a new toolbar button that calls my custom function?**  
+**026 - How can I add a toolbar button that calls a function?**
+
+Looking at what was already presented in item (question) 021, it is possible to add a button in the toolbar with HTML Elements and format CSS classes in HTML code (Nº3 - 020). For a button that has nothing to do with any registered format, you can add events to it as usual. 
+
+Assuming we have the following structure being used as a toolbar:
+```javascript
+<div id="standalone-container">
+  <div id="toolbar-container">
+    <span class="ql-formats">
+      <button class="ql-bold"></button>
+      <button class="ql-italic"></button>
+      <button class="ql-underline"></button>
+      <button class="ql-strike"></button>
+    </span>
+    <span class="ql-formats">
+      <button id="click-me-button">CLICK ME</button>
+    </span>
+  </div>
+  <div id="editor-container"></div>
+</div>
+```
+You can add an event to the CLICK ME button via JavaScript code such as:
+```javascript
+var clickMeButton = document.getElementById('click-me-button');
+clickMeButton.addEventListener("click", (event) => {
+   // Some logic here...
+});
+```
+Or by setting the button element `onclick` attribute to call your desired function:
+```html
+<button onclick="clickMeFunction()">CLICK ME</button>
+```
