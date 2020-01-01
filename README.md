@@ -296,3 +296,11 @@ LocalVideo.tagName = 'VIDEO';
 Quill.register(LocalVideo);
 ```
 As a suggestion for implementing custom formats, take a look at the projects in this repository.
+
+**025 - How can I add a custom attributor?**  
+**025 - How can I define my own custom attributor?**
+
+[Creating a custom class attributer in QuillJS](https://stackoverflow.com/questions/44219124/creating-a-custom-class-attributer-in-quilljs)  
+[Using Quill.js To Build A WYSIWYG Editor For Your
+   Website](https://www.scalablepath.com/blog/using-quill-js-build-wysiwyg-editor-website/)  
+[Example for custom class attributor](https://github.com/quilljs/quill/issues/1036)
