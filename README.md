@@ -342,4 +342,5 @@ Or by setting the button element `onclick` attribute to call your desired functi
 **027 - How can I change Quill native format icons?**
 
 https://github.com/quilljs/quill/issues/1099#issuecomment-258560326  
-https://stackoverflow.com/a/40385877/2910546
+https://stackoverflow.com/a/40385877/2910546  
+https://stackoverflow.com/a/55181398/2910546
