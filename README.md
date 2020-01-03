@@ -341,4 +341,5 @@ Or by setting the button element `onclick` attribute to call your desired functi
 **027 - How can I override/change existing icons from toolbar buttons?**  
 **027 - How can I change Quill native format icons?**
 
-https://github.com/quilljs/quill/issues/1099#issuecomment-258560326
+https://github.com/quilljs/quill/issues/1099#issuecomment-258560326  
+https://stackoverflow.com/a/40385877/2910546
