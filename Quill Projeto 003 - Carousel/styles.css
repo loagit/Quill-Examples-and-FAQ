@@ -1,0 +1,412 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#all{
+    margin: 50px;
+}
+
+/* See: https://stackoverflow.com/a/9314458 */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                       supported by Chrome and Opera */
+}
+
+/* ################################################################################ */
+/*                                                                         TOOLTIP  */
+/* ################################################################################ */
+
+/* ############################ */
+/*  Image Tooltip (container)   */
+/* ############################ */
+
+.tooltip-img-slider-container {
+    width: 300px;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px #ddd;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.tooltip-img-slider-container svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ############################ */
+/*  Header Buttons              */
+/* ############################ */
+
+.tooltip-img-slider-header {
+    padding: 6px;
+    display: flex;
+}
+
+.tooltip-img-slider-header #title{
+    flex-grow: 2;
+    margin-left: 6px;
+    margin-right: 6px;
+    line-height: 26px;
+    color: #606060;
+}
+
+.tooltip-img-slider-header #mover{
+    /*flex-grow: 1;*/
+    width: 80px;
+    margin-right: 6px;
+    cursor: grab;
+
+    color: #8d8d8d;
+    border: solid 1px #8d8d8d;
+    margin-right: 6px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.tooltip-img-slider-header #conclude{
+    /*flex-grow: 1;*/
+    width: 80px;
+    cursor: pointer;
+
+    color: #1abc9c;
+    border: solid 1px #1abc9c;
+    background: none;
+}
+
+.tooltip-img-slider-header #mover:hover{ background: #f1f1f1; }
+.tooltip-img-slider-header #mover:active { 
+    cursor: grabbing;
+    background: none;
+    border-color: #f7b97e;
+    color: #f7b97e; 
+}
+
+.tooltip-img-slider-header #conclude:hover{ background: #bdf5ea; }
+
+/* ############################ */
+/*  Tab and tab buttons         */
+/* ############################ */
+
+.tooltip-img-slider-tabs {
+    display: flex;
+}
+
+.tooltip-img-slider-tabs button {
+    width: 50%; /* better than...
+    flex-grow: 1;*/
+
+    background: #f1f1f1;
+    border-bottom: solid 1px #ccc;
+    border-top: solid 1px #ccc;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    color: #606060;
+}
+
+.tooltip-img-slider-tabs .active-tab {
+    background: #ccc;
+}
+
+.tooltip-img-slider-tabs button:nth-child(1) {
+    border-right: solid 1px #ccc;
+}
+
+.tooltip-img-slider-tabs button:hover {
+    background: #ddd;
+}
+
+/* ############################ */
+/*  Config                      */
+/* ############################ */
+
+.tooltip-img-slider-config {
+    padding: 6px;
+}
+
+.tooltip-img-slider-config .config-container {
+    border: solid 1px #ccc;
+    padding: 8px;
+}
+
+.tooltip-img-slider-config .one-column-config {
+    width: 100%; 
+    margin-bottom: 6px;
+}
+
+.tooltip-img-slider-config .bottom-container {
+    display: flex;
+}
+
+.tooltip-img-slider-config .two-column-config {
+    width: 50%; /* better than...
+    flex-grow: 1;*/
+}
+
+/* First column */
+.tooltip-img-slider-config .two-column-config:nth-child(1) {
+    margin-right: 6px;
+}
+
+.tooltip-img-slider-config .config-value {
+    float: right;
+}
+
+.tooltip-img-slider-config .two-column-config input {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+}
+
+/* SWITCHER SLIDER */
+
+/* The switch - the box around the slider */
+.switcher {
+    position: relative;
+    /* display: inline-block; */
+    width: 50px;
+    height: 22px;
+    float: right;
+    top: -3px;
+}
+  
+/* Hide default HTML checkbox */
+.switcher input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+/* The real slider */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+  
+.switcher input:checked + .slider {
+    background-color: #99ff99;
+}
+  
+.switcher input:focus + .slider {
+    box-shadow: 0 0 1px #99ff99;
+}
+  
+.switcher input:checked + .slider:before {
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
+}
+
+/* ############################ */
+/*  Image Fields                */
+/* ############################ */
+
+.tooltip-img-slider-images{
+    padding: 6px;
+}
+
+.tooltip-img-slider-images-buttons {
+    display: flex;
+}
+
+.tooltip-img-slider-images-buttons button {
+    width: 50%;/* better than...
+    flex-grow: 1;*/
+
+    height: 28px;
+}
+
+/* Botão de novo campo. */
+.tooltip-img-slider-images-buttons #button-new-field {
+    cursor: pointer;
+    color: #1abc9c;
+    border: solid 1px #1abc9c;
+    background: none;
+}
+
+.tooltip-img-slider-images-buttons #button-new-field:hover { background: #bdf5ea; }
+
+/* Botão de limpeza de campos. */
+.tooltip-img-slider-images-buttons #button-clear-fields {
+    cursor: pointer;
+    color: #FAA954;
+    border: solid 1px #FAA954;
+    background: none;
+    margin-left: 6px;
+}
+
+.tooltip-img-slider-images-buttons #button-clear-fields:hover { background: #ffeedd; }
+
+.tooltip-img-slider-images-fields .img-field {
+    display: flex;
+    margin-top: 6px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    height: 28px;
+}
+
+.tooltip-img-slider-images-fields input {
+    flex-grow: 2;
+    padding-left: 6px;
+    height: 100%;
+    border: none;
+}
+
+.tooltip-img-slider-images-fields button {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+
+    background: none;
+    border: none;
+}
+
+.tooltip-img-slider-images-fields .x-icon {
+    fill: #ff8989;
+}
+
+.tooltip-img-slider-images-fields button:hover .x-icon,
+.tooltip-img-slider-images-fields .x-icon:hover {
+    fill: #ffaaaa;
+}
+
+/* ################################################################################ */
+/*                                                                  BLOT AND SLICK  */
+/* ################################################################################ */
+
+.ql-slider-images {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Container interno do slick que contém slides (.slick-slide). */
+/*
+.slick-track { 
+    display: flex !important;
+} 
+*/
+
+/* Slides de container interno do slick (.slick-track). */
+
+.slick-track {
+    display: flex;
+}
+
+.slick-slide { 
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+.slick-prev,
+.slick-next{
+    background: #db6262;
+}
+*/
+
+.slick-prev::before,
+.slick-next::before {
+    color:#ccc;
+}
+
+/*
+.ql-slider-images:active {
+    background: #1abc9c;
+}
+*/
+
+/* ################################################################################ */
+/*                                                                            TABS  */
+/* ################################################################################ */
+
+ /* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+  
+  /* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+  
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+  
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+  
+/* Style the tab content */
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+} 
+
+  
+/*###################### */
+/* DELTA, TEXT AND HTML  */
+/*###################### */
+
+#tab-content-delta,
+#tab-content-html,
+#tab-content-text {
+    padding: 0px;
+}
+
+pre{
+    white-space: normal;
+}
+
+code{
+    white-space: pre-wrap;
+}
+
+#tab-content-delta p{
+    font-family: Candara;
+}
