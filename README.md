@@ -45,6 +45,8 @@ This project shows how you can create a new module to add interesting features t
 
 For the implementation of the carousel of images, the [Slick JS](https://kenwheeler.github.io/slick/) library was used. For this reason, it is also possible to discover how to incorporate existing libraries/resources as new features to the editor.
 
+This project was deeply inspired by [quill-emoji](https://github.com/contentco/quill-emoji), which I am truly grateful for.
+
 **Instructions:**
 
 1.  A new button is present on Quill toolbar. Click on it and a small tooltip window will appear. This window is divided into a header, and two tabs with their contents.
