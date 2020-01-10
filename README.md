@@ -47,9 +47,7 @@ For the implementation of the carousel of images, the [Slick JS](https://kenwhee
 
 **Instructions:**
 
-A new button is present on Quill toolbar. 
-
-1.  Click on it and a small tooltip window will appear. This window is divided into a header, and two tabs with their contents.
+1.  A new button is present on Quill toolbar. Click on it and a small tooltip window will appear. This window is divided into a header, and two tabs with their contents.
 2.  Use the first tab to configure simple carousel settings.
 3.  Use the second tab to set the image URLs that will appear on the carousel. For convenience, testing and presentation, some images have already been separated.
 4.  When you are done, click the insert header button.
