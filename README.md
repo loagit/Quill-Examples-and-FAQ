@@ -39,6 +39,22 @@ This project demonstrates how you can extend an existing blot to slightly change
 3.  A small inbox will appear. Enter any desired video URL.
 4.  Press save and see the result.
 
+### Quill Project 003 - Carousel
+
+This project shows how you can create a new module to add interesting features to Quill. Here we see how we can create a button in toolbar which displays a small tooltip that serves as means to create a carousel of images. Besides the user can choose which images will be used, he/she can also define some extra settings.
+
+For the implementation of the carousel of images, the [Slick JS](https://kenwheeler.github.io/slick/) library was used. For this reason, it is also possible to discover how to incorporate existing libraries/resources as new features to the editor.
+
+**Instructions:**
+
+A new button is present on Quill toolbar. 
+
+1.  Click on it and a small tooltip window will appear. This window is divided into a header, and two tabs with their contents.
+2.  Use the first tab to configure simple carousel settings.
+3.  Use the second tab to set the image URLs that will appear on the carousel. For convenience, testing and presentation, some images have already been separated.
+4.  When you are done, click the insert header button.
+5.  When the carousel is inserted, click the navigation buttons (the arrows), or click and drag the images to change its content.
+
 # QUILL FAQ
 
 Wishing to bring more information, I decided to create a FAQ section. I want to make it clear that the answers to all the questions listed were obtained from different locations over the internet. Its authors have not given me permission to exhibit here, nor have they denied me. If they wish so, I am open to remove any desired item. Likewise, the credit on them belongs to each one.
