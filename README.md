@@ -63,6 +63,7 @@ Wishing to bring more information, I decided to create a FAQ section. I want to 
 **001 - How can I add a module to Quill?**
 
 https://quilljs.com/guides/building-a-custom-module/
+Also, take a look at [Quill Project 003 - Carousel](https://github.com/loagit/Quill-Examples-and-FAQ/tree/master/Quill%20Projeto%20003%20-%20Carousel).
 
 **002 - How can I perform CRUD operations through Quill API?**  
 **002 - How can I insert or remove content?**
