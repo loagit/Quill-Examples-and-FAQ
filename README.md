@@ -362,3 +362,7 @@ Or by setting the button element `onclick` attribute to call your desired functi
 https://github.com/quilljs/quill/issues/1099#issuecomment-258560326  
 https://stackoverflow.com/a/40385877/2910546  
 https://stackoverflow.com/a/55181398/2910546
+
+**028 - How can I display a tooltip when the mouse is over a toolbar button?**
+
+https://quilljs.com/playground/#snow-toolbar-tooltips
