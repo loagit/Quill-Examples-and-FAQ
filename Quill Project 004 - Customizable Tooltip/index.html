@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- jQuery -->
+    <script src="libs/jquery/jquery-3.4.1.min.js"></script>
+
+    <!-- Highlight -->
+    <link rel="stylesheet" href="libs/highlight/styles/atelier-cave-dark.css">
+    <script src="libs/highlight/highlight.pack.js"></script>
+
+    <!-- Quill -->
+    <link rel="stylesheet" type="text/css" href="libs/quill/quill.snow.css" />
+    <script type="text/javascript" src="libs/quill/quill.js"></script>
+
+    <!-- My stuff -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id="all">
+        <div id="editor"></div>
+
+        <!-- Add some space -->
+        <div style="margin-top: 40px;"></div>
+
+        <!-- Tab buttons -->
+        <div class="tab">
+            <button id="default-tab-button" class="tab-button"
+                onclick="openTab(event, 'tab-content-delta')">Delta</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-content-text')">Text</button>
+            <button class="tab-button" onclick="openTab(event, 'tab-content-html')">HTML</button>
+        </div>
+
+        <!-- Tab contents -->
+        <div id="tab-content-delta" class="tab-content">
+            <p>...</p>
+            <pre><code class="json"></code></pre>
+        </div>
+        <div id="tab-content-text" class="tab-content">
+            <pre><code class="plaintext"></code></pre>
+        </div>
+        <div id="tab-content-html" class="tab-content">
+            <pre><code class="html"></code></pre>
+        </div>
+    </div>
+</body>
+
+</html>

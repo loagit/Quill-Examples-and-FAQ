@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#all{
+    margin: 50px;
+}
+
+/* See: https://stackoverflow.com/a/9314458 */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                       supported by Chrome and Opera */
+}
+
+/* ################################################################################ */
+/*                                                                         TOOLTIP  */
+/* ################################################################################ */
+
+.rs-tooltip-container {
+    background-color:#fff;
+    border: 1px solid#ccc;
+    box-shadow: 0px 0px 5px#ddd;
+    color:#444;
+    padding: 5px 12px;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.rs-tooltip-label {
+    margin-right: 8px;
+}
+
+.rs-tooltip-input {
+    padding: 3px 5px;
+    font-size: 13px;
+    height: 26px;
+    width: 220px;
+}
+
+.rs-tooltip-action {
+    margin-left: 8px;
+}
+
+/* ################################################################################ */
+/*                                                                            TABS  */
+/* ################################################################################ */
+
+ /* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+  
+  /* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+  
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+  
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+  
+/* Style the tab content */
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+} 
+
+  
+/*###################### */
+/* DELTA, TEXT AND HTML  */
+/*###################### */
+
+#tab-content-delta,
+#tab-content-html,
+#tab-content-text {
+    padding: 0px;
+}
+
+pre{
+    white-space: normal;
+}
+
+code{
+    white-space: pre-wrap;
+}
+
+#tab-content-delta p{
+    font-family: Candara;
+}
