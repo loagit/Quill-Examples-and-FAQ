@@ -55,6 +55,36 @@ This project was deeply inspired by [quill-emoji](https://github.com/contentco/q
 4.  When you are done, click the insert header button.
 5.  When the carousel is inserted, click the navigation buttons (the arrows), or click and drag the images to change its content.
 
+### Quill Project 004 - Customizable Tooltip
+
+This project shows how it is possible to create a new simple tooltip that can insert images through URLs (simpler than presented in project 003 - Carousel). It looks almost the same as the native Quill tooltip.
+
+To make the developer user of this tool more comfortable, a number of configuration possibilities have been added, allowing the tooltip to be stylized, to have its text modified, and to be more comfortable to work with. The following is a complete list of configurable settings:
+
+- format: The format to be worked by tooltip.
+- inputLabel: Left label given to value input.
+- inputLabelClass: Overrides CSS class for value input label styling.
+- inputPlaceholder: Value input placeholder text (<input placeholder="...">).
+- inputClass: Overrides CSS class for value input styling.
+- actionText: Text for action "button" to the right of value input.
+- actionClass: Overrides CSS class for action text (the "button").
+- containerClass: Replaces CSS class for element that contains all others.
+- hideOnTyping: If true, tooltip will be hidden when typing in Quill.
+- hideOnAction: If true, tooltip will be hidden by clicking action text.
+- clearAfterHide: If true, the value input has its text cleared after tooltip is hidden.
+- defaultValue: Defines a default value for value input. If set, clearAfterHide is always false.
+- onAction: Function called when action text is clicked by the user. Setting a value for this property makes the user responsible for the tooltip action.
+- onShow: Function called when tooltip is revealed.
+- onHide: Function called when tooltip is hidden.
+
+By allowing such settings, it is possible not only to override Quill's default image utility (format), but also video.
+
+**Instructions:**
+
+1.  Click on the image button.
+2.  Add the desired image URL.
+3.  Click on the Insert text.
+
 # QUILL FAQ
 
 Wishing to bring more information, I decided to create a FAQ section. I want to make it clear that the answers to all the questions listed were obtained from different locations over the internet. Its authors have not given me permission to exhibit here, nor have they denied me. If they wish so, I am open to remove any desired item. Likewise, the credit on them belongs to each one.
