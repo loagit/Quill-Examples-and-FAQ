@@ -64,7 +64,7 @@ To make the developer user of this tool more comfortable, a number of configurat
 - format: The format to be worked by tooltip.
 - inputLabel: Left label given to value input.
 - inputLabelClass: Overrides CSS class for value input label styling.
-- inputPlaceholder: Value input placeholder text (<input placeholder="...">).
+- inputPlaceholder: Value input placeholder text (`<input placeholder="...">`).
 - inputClass: Overrides CSS class for value input styling.
 - actionText: Text for action "button" to the right of value input.
 - actionClass: Overrides CSS class for action text (the "button").
