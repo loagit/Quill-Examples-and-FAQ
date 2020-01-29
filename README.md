@@ -20,13 +20,16 @@ https://stackoverflow.com/q/59366868/2910546
 
 ### Quill Project 001 - Hightlight
 
-Using the bubble theme, we have here a toolbar with highlight controls. With this tool you can add/remove different highlight types in any selected text snippet.
+Using the bubble theme, we have here a toolbar with highlight controls. With this tool you can add/remove different highlight types in any selected text snippet. In this project, you will also discover how to:
+
+1.  Create a format.
+2.  Create a format that can take values (arguments).
+3.  Make the format behave differently depending on the received value.
 
 **Instructions:**
 
 1.  Select any portion of text to appear on the toolbar.
 2.  Use the options on the toolbar.
-
 
 ### Quill Project 002 - Centralized Video
 
